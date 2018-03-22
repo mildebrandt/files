@@ -14,7 +14,7 @@ bindkey -k k6 prev   #Use F9 to move to the previous screen window
 bindkey -k k7 screen #Use F10 to start a new screen window
 bindkey -k k8 next   #Use F11 to move to the next screen window
 
-shelltitle '] |bash'
+shelltitle '$ |fish'
 
 screen
 screen
