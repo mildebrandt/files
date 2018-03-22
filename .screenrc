@@ -1,0 +1,23 @@
+defscrollback 5000 #Lines to scrollback
+termcapinfo xterm-256color|xterm-color|xterm|xterms|xs|rxvt ti@:te@ #Allow the mouse to scroll the contents of the screen window
+startup_message off #Supress screen's startup message
+altscreen on #Allows vim to remove editor screen upon exit
+
+caption string "%?%F%{= Bk}%? %C%A %D %d-%m-%Y %{= kB} %t%= %?%F%{= Bk}%:%{= wk}%? %n "
+hardstatus alwayslastline #Display the status on the last line
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m/%d %{W}%c %{g}]' #Status line displays hostname, screen names, and date/time
+
+bindkey -k k2 split  #Use F2 to split the screen horizontally
+bindkey -k k3 remove #Use F3 to remove the focused split screen
+bindkey -k k4 focus  #Use F4 to shift focus when using split screen
+bindkey -k k6 prev   #Use F9 to move to the previous screen window
+bindkey -k k7 screen #Use F10 to start a new screen window
+bindkey -k k8 next   #Use F11 to move to the next screen window
+
+shelltitle '] |bash'
+
+screen
+screen
+select 1
+stuff "cd ~/workspace/^M"
+select 0
