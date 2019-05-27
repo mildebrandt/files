@@ -1,0 +1,14 @@
+[user]
+	name = Chris Mildebrandt
+[pull]
+	rebase = true
+[push]
+	default = current
+[branch]
+	autosetuprebase = always
+[rerere]
+	enabled = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[alias]
+	pf = push --force-with-lease
